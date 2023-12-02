@@ -4,8 +4,15 @@ namespace App\Classes;
 
 class Crud
 {
+    public $field = "field";
+    public $table = "users";
     public function read()
     {
-        return "read";
+        var_dump($this->field);
+    }
+
+    public function delete()
+    {
+        var_dump($this->read());
     }
 }

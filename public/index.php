@@ -2,8 +2,7 @@
 
 require "../vendor/autoload.php";
 
-$stdClass = new stdClass;
-$stdClass->name = "Marco";
-$stdClass->email = "marco@mail.com";
+$crud = new \App\Classes\Crud;
 
-var_dump($stdClass->email);
+# fluent-interface
+$crud->delete();

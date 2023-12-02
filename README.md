@@ -34,3 +34,36 @@ ao usar stdClass, você não tem a definição explícita de propriedades ou mé
 e isso pode tornar o código menos previsível em comparação com o uso de classes definidas pelo programador.
 É mais comum usar stdClass em situações específicas e simples, optando por classes personalizadas quando
 a lógica do programa se torna mais complexa.
+#
+
+## This
+A palavra-chave this é usada em linguagens de programação orientadas a objetos para se referir
+ao próprio objeto no contexto atual. Ela é usada dentro de métodos de uma classe para acessar 
+os membros (variáveis ou métodos) desse objeto.
+
+this é uma referência contextual que permite aos objetos se referirem a si mesmos,
+acessando seus próprias propriedades e métodos dentro do escopo de uma classe.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
