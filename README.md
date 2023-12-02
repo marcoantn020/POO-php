@@ -1,6 +1,6 @@
 # POO
 
-## Classe
+## Class
 
 Uma classe é um modelo ou um plano para criar objetos. 
 Ela funciona como um "template" que define atributos (variáveis) e comportamentos (métodos)
@@ -22,10 +22,15 @@ Os namespaces ajudam na legibilidade, manutenção e reutilização do código,
 facilitando a identificação e agrupamento de elementos relacionados.
 #
 
-## StdClass
+## StdClass (stander class)
 
 É uma classe predefinida que é utilizada para criar objetos de forma dinâmica. Esses objetos podem receber
 propriedades(variáveis) e métodos de forma dinâmica durante a execução do código.
 
 A classe stdClass é útil em situações em que você precisa de um objeto simples para armazenar dados temporários
 ou quando não é necessário criar uma classe personalizada.
+
+ao usar stdClass, você não tem a definição explícita de propriedades ou métodos(stdClass não tem métodos),
+e isso pode tornar o código menos previsível em comparação com o uso de classes definidas pelo programador.
+É mais comum usar stdClass em situações específicas e simples, optando por classes personalizadas quando
+a lógica do programa se torna mais complexa.
