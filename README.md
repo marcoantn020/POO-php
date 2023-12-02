@@ -13,3 +13,19 @@ e comportamentos que os objetos de um determinado tipo terão.
 #
 
 ## Namespaces
+
+Um namespace em programação é um mecanismo que permite organizar o código em um espaço de nomes específico.
+Ele é usado para evitar conflitos de nomeação e para modularizar o código, permitindo que partes diferentes
+do código usem os mesmos nomes sem colidir.
+
+Os namespaces ajudam na legibilidade, manutenção e reutilização do código,
+facilitando a identificação e agrupamento de elementos relacionados.
+#
+
+## StdClass
+
+É uma classe predefinida que é utilizada para criar objetos de forma dinâmica. Esses objetos podem receber
+propriedades(variáveis) e métodos de forma dinâmica durante a execução do código.
+
+A classe stdClass é útil em situações em que você precisa de um objeto simples para armazenar dados temporários
+ou quando não é necessário criar uma classe personalizada.

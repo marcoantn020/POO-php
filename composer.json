@@ -2,13 +2,16 @@
     "name": "marco/poo-php",
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
-        }
+            "App\\": "App/"
+        },
+        "files": [
+            "Helpers/functions.php"
+        ]
     },
     "authors": [
         {
             "name": "marcoantn020",
-            "email": "marcoantn020@gmail.com"
+            "email": "marco@gmail.com"
         }
     ],
     "require": {}
