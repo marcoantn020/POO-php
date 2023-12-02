@@ -11,8 +11,8 @@ class Crud
         var_dump($this->field);
     }
 
-    public function delete()
+    public function delete(): string
     {
-        var_dump($this->read());
+        return 'deletando...';
     }
 }
