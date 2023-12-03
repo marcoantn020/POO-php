@@ -1,16 +1,27 @@
 <?php
 declare(strict_types=1);
 
+use App\Classes\Book;
+use App\Classes\Lamp;
+use App\Model\User;
+
+//header('Content-type: application/json');
+
 require "../vendor/autoload.php";
 
-try {
-    $login = new \App\Classes\Login;
+//$book = new Book;
 
-    echo $login->auth(email: "marco@marco.com", password: '123');
-    echo "<br />";
-    echo $login->authorization(new \App\Classes\Crud());
+//echo $book->info();
+//echo '<br />';
+//echo '<br />';
 
-} catch (TypeError $te) {
-    var_dump($te->getMessage());
-}
+//$lamp = new Lamp;
+//$lamp->name = 'Lamp led';
+//$lamp->description = 'Description complete of lamp';
+//$lamp->isOn = true;
+//
+//echo $lamp->info();
+//echo json_encode($lamp);
 
+$user = new User;
+echo $user->all();
