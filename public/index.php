@@ -1,27 +1,39 @@
 <?php
 declare(strict_types=1);
 
-use App\Classes\Book;
-use App\Classes\Lamp;
-use App\Model\User;
-
-//header('Content-type: application/json');
-
 require "../vendor/autoload.php";
 
-//$book = new Book;
+class User {
 
-//echo $book->info();
-//echo '<br />';
-//echo '<br />';
+    public function __construct(
+        public string $name,
+        public int $age
+    ){}
 
-//$lamp = new Lamp;
-//$lamp->name = 'Lamp led';
-//$lamp->description = 'Description complete of lamp';
-//$lamp->isOn = true;
-//
-//echo $lamp->info();
-//echo json_encode($lamp);
+    public function info()
+    {
+        return "Meu nome é $this->name, e minha idade $this->age";
+    }
+}
 
-$user = new User;
-echo $user->all();
+class User2 extends User {
+
+
+    public function __construct(
+        $name, $age,
+        public string $profession
+    )
+    {
+        parent::__construct($name, $age);
+    }
+
+    public function getProfession()
+    {
+        return "<br /> minha profissão é $this->profession";
+    }
+
+}
+
+$user = new User2(name: "Marco", age: 32, profession: "Jubileu");
+echo $user->info();
+echo $user->getProfession();
