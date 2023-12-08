@@ -5,35 +5,25 @@ require "../vendor/autoload.php";
 
 class User {
 
-    public function __construct(
-        public string $name,
-        public int $age
-    ){}
-
-    public function info()
+    public static function info()
     {
-        return "Meu nome é $this->name, e minha idade $this->age";
+        return __CLASS__;
+    }
+
+    public static function test()
+    {
+         var_dump(self::info());
+         var_dump(static::info());
     }
 }
 
 class User2 extends User {
 
-
-    public function __construct(
-        $name, $age,
-        public string $profession
-    )
+    public static function info()
     {
-        parent::__construct($name, $age);
+        return parent::info();
     }
-
-    public function getProfession()
-    {
-        return "<br /> minha profissão é $this->profession";
-    }
-
+    
 }
 
-$user = new User2(name: "Marco", age: 32, profession: "Jubileu");
-echo $user->info();
-echo $user->getProfession();
+echo User2::info();

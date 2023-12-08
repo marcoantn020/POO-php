@@ -156,18 +156,57 @@ do objeto.
 Se a classe não define um método __construct(), o PHP chamará automaticamente um construtor padrão vazio quando um
 objeto é instanciado. No entanto, é uma boa prática definir explicitamente o método __construct() para documentar e
 garantir a inicialização correta dos objetos.
+#
 
+## Classes metodos e propriedades estaticas
+Em PHP, uma classe estática é uma classe que contém apenas membros estáticos: propriedades estáticas e métodos estáticos.
+Esses membros são acessados sem a necessidade de instanciar um objeto dessa classe.
+Eles pertencem à classe em si, não a instâncias individuais dessa classe.
 
+```
+class MinhaClasse {
+    public static $propriedadeEstatica = 10;
 
+    public static function metodoEstatico() {
+        return "Método estático foi chamado!";
+    }
+}
 
+echo MinhaClasse::$propriedadeEstatica; // Acessando a propriedade estática diretamente
+echo MinhaClasse::metodoEstatico(); // Chamando um método estático diretamente
 
+```
+**Uso de Classes Estáticas:**
+**Acessibilidade global:** Propriedades e métodos estáticos podem ser acessados de qualquer lugar do código,
+sem precisar criar uma instância da classe.
 
+**Armazenamento de valores globais:** Propriedades estáticas podem ser usadas para armazenar valores globais compartilhados
+entre diferentes partes do código.
 
+**Utilitários e funcionalidades independentes de instância:** Métodos estáticos são úteis para funcionalidades que não
+dependem de um estado de instância e podem ser chamados sem criar um objeto.
 
+a palavra-chave **self** é usada dentro de uma classe para fazer referência à própria classe, especialmente para acessar 
+membros estáticos (propriedades ou métodos estáticos) ou para se referir ao contexto da própria classe.
 
+**Quando Usar self:**
+**Acessando membros estáticos:** self é usado principalmente para referenciar membros estáticos de
+uma classe (propriedades ou métodos estáticos).
 
+**Contexto estático:** É utilizado para referenciar o contexto da própria classe, especialmente quando se
+está dentro de métodos estáticos.
 
+**OBSERVAÇÂO:** É importante notar que **self** é resolvido em tempo de compilação, o que significa que ele sempre se refere à classe onde
+foi escrito, não levando em conta herança ou sobrescrita. Se você deseja permitir a sobrescrita em métodos e propriedades,
+pode considerar o uso de **static**, que se comporta de maneira polimórfica em PHP.
 
+A palavra-chave **static** tem diferentes usos em diferentes contextos, mas geralmente é associada a propriedades
+e métodos estáticos, bem como à herança e à polimorfia em algumas situações específicas.
+
+**Uso em Contextos de Herança:**
+static permite que métodos e propriedades se comportem de forma polimórfica, o que significa que o comportamento
+é determinado pelo contexto de execução (subclasse/filha) em vez do contexto de definição (superclasse/pai). Isso é útil para 
+garantir que métodos e propriedades sejam invocados de acordo com a classe concreta sendo usada.
 
 
 
